@@ -30,6 +30,7 @@ private String status;
     @Column(name = "password", nullable = false)
     private String password;
 	private String otp;
+    private String access;
 
 
 }

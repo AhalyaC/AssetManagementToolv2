@@ -64,6 +64,7 @@ public class JwtTokenUtil implements Serializable{
 		AdminRegistrationEntity adinData=adminRepo.findByEmpId(username);
 		claims.put("adminName",adinData.getFirstName());
 		claims.put("location",adinData.getLocation());
+		claims.put("access",adinData.getAccess());
 //		claims.put("access","Read");
 		return Jwts.builder().setClaims(claims).setSubject(username)
 				.setIssuedAt(new Date(System.currentTimeMillis()))
